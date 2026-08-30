@@ -132,21 +132,24 @@ $csrfToken = csrfToken();
         @keyframes cardIn { to { opacity: 1; transform: translateY(0); } }
 
         .admin-badge {
-            width: 56px;
-            height: 56px;
-            border-radius: 16px;
-            background: linear-gradient(135deg, #a3e635, #65a30d);
-            color: #052e16;
+            width: 72px;
+            height: 72px;
+            border-radius: 18px;
+            background: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 800;
-            font-size: 1.35rem;
-            box-shadow: 0 8px 20px rgba(132, 204, 22, 0.3);
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
             margin: 0 auto 1.1rem;
             opacity: 0;
             transform: scale(0.7) rotate(-6deg);
             animation: badgePop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 0.08s forwards;
+        }
+        .admin-badge img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 8px;
         }
         @keyframes badgePop { to { opacity: 1; transform: scale(1) rotate(0); } }
 
@@ -312,7 +315,9 @@ $csrfToken = csrfToken();
 <body>
 <div class="page-center">
     <div class="card" id="loginCard">
-        <div class="admin-badge">FICT</div>
+        <div class="admin-badge">
+            <img src="../assets/logo.png" alt="FICT Logo">
+        </div>
         <h2 class="card-title">Election Admin</h2>
         <p class="card-subtitle">Sign in to manage elections, students, and results.</p>
 
